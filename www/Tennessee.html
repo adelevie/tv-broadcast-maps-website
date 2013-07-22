@@ -28,7 +28,15 @@
       key: '624cdf50c18148ac8c2b5e220c7d0a44'
     }).addTo(map);
 
-    var stateStyle = {};
+    var stateStyle = {
+      //fillColor: getColor(feature.properties.density),
+      fillColor: 'white',
+      weight: 2,
+      opacity: 1,
+      // color: 'white',
+      dashArray: '3',
+      fillOpacity: 0.7
+    };
 
     L.geoJson(statesData, {style: stateStyle}).addTo(map);
 
