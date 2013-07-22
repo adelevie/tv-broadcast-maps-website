@@ -47,7 +47,6 @@ This uses the `pry-rescue` gem, which can be helpful for debugging.
 
 ### TODO
 
-- Remove light blue background from `state-outlines.js`.
 - Edit contour markers (make them smaller or just make them go away).
 - Add very thin opacity to contour layers, so areas that have access to multiple stations are darker.
 
