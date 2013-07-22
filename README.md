@@ -14,7 +14,7 @@ You can also very easily build these maps from source. You just need Ruby instal
 
 ```sh
 $ git clone https://github.com/adelevie/tv-broadcast-maps-website.git
-$ cd https://github.com/adelevie/tv-broadcast-maps-website.git
+$ cd tv-broadcast-maps-website
 $ bundle
 $ sh bootstrap.sh
 ```
@@ -26,7 +26,7 @@ $ node install connect
 $ node dev-server.js
 ```
 
-From here, go to `localhost:1337/www/index.html`.
+From here, go to `localhost:1337/www/index.html` in a browser..
 
 ### TODO
 
