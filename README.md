@@ -26,7 +26,24 @@ $ node install connect
 $ node dev-server.js
 ```
 
-From here, go to `localhost:1337/www/index.html` in a browser..
+From here, go to `localhost:1337/www/index.html` in a browser.
+
+## Developing
+
+If you want to edit the pages, just change the appropriate file in the `templates` folder, and run:
+
+```sh
+$ ruby render.rb
+```
+
+You can also run:
+
+```sh
+$ rescue render.rb
+```
+
+This uses the `pry-rescue` gem, which can be helpful for debugging.
+
 
 ### TODO
 
