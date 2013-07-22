@@ -22,7 +22,7 @@ mv www/$OLD_FOLDER_NAME/json/ www/maps
 # delete old copy of data
 rm -rf www/$OLD_FOLDER_NAME
 
-cp state-outlines.js www/state-outlines.js
+cp data/state-outlines.js www/state-outlines.js
 
 ruby render.rb
 

@@ -30,7 +30,7 @@ end
 
 def latlong_for_state_abbreviation(state_abbreviation)
   states = {}
-  CSV.foreach("state-coordinates.csv") do |row|
+  CSV.foreach("data/state-coordinates.csv") do |row|
     coord = {row[0] => [row[1], row[2]]}
     states.merge!(coord)
   end
@@ -38,12 +38,10 @@ def latlong_for_state_abbreviation(state_abbreviation)
   return states[state_abbreviation]
 end
 
-states = JSON.parse(File.open("states.json").read)
+states = JSON.parse(File.open("data/states.json").read)
 
-# temporary for development
-# states = [states.first]
 
-index_html = render_erb_from_file("index.erb", "states" => states)
+index_html = render_erb_from_file("templates/index.erb", "states" => states)
 create_file("www/index.html")
 File.open("www/index.html", 'w') {|f| f.write(index_html) }
 
@@ -61,7 +59,7 @@ states.each do |state|
     "json_filenames" => json_filenames,
     "latlong" => latlong.to_json
   }
-  map_html = render_erb_from_file("map.erb", params)
+  map_html = render_erb_from_file("templates/map.erb", params)
   filename = "www/" + state["name"].gsub(" ", "_") + ".html"
   create_file(filename)
   File.open(filename, 'w') {|f| f.write(map_html) }
