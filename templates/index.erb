@@ -8,7 +8,7 @@
 
     <ul>
     <% for state in states %>
-      <li><a href="/www/<%= state['name'].gsub(" ", "_") %>.html"><%= state["name"] %> (<%= state["abbreviation"] %>)<a/></li>
+      <li><a href="<%= state['name'].gsub(" ", "_") %>.html"><%= state["name"] %> (<%= state["abbreviation"] %>)<a/></li>
     <% end %>
     </ul>
   </body>
