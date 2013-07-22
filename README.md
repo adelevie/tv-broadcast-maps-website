@@ -13,8 +13,8 @@ To view/serve the HTML files, there are no dependencies that you need to install
 You can also very easily build these maps from source. You just need Ruby installed on a Mac or Linux computer:
 
 ```sh
-$ git clone <>
-$ cd <>
+$ git clone https://github.com/adelevie/tv-broadcast-maps-website.git
+$ cd https://github.com/adelevie/tv-broadcast-maps-website.git
 $ bundle
 $ sh bootstrap.sh
 ```
